@@ -14,7 +14,7 @@ public final class R {
     public static final class attr {
     }
     public static final class color {
-        public static final int line=0x7f050000;
+        public static final int divider=0x7f050000;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
