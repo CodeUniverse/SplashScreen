@@ -26,12 +26,17 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
-public class SplashScreen extends Activity {
+public class SplashScreenAnimation extends Activity {
 
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		getActionBar().hide();
-		setContentView(R.layout.activity_splashscreen);
+		setContentView(R.layout.activity_splashscreen_animation);
+		Animation a = AnimationUtils.loadAnimation(this, R.anim.animation);
+		a.reset();
+		ImageView iv = (ImageView) findViewById(R.id.imageView1);
+		iv.clearAnimation();
+		iv.startAnimation(a);
 		Thread splashThread = new Thread() {
 			@Override
 			public void run() {
